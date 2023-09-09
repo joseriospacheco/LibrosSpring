@@ -51,4 +51,11 @@ public class LibroServiceImpl implements LibroService {
 
 		}
 	}
+
+	@Override
+	public List<Libro> consultarLibros(String titulo) {
+	
+		return	libroRepository.findByTituloContains(titulo);
+
+	}
 }
